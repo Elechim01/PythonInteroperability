@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showResult: Bool = false
+    @State var reslut : String = ""
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button {
+             let value =  runPythonCode()
+               reslut =  value.description
+                showResult.toggle()
+            } label: {
+                Text("run Python Code")
+            }
+            if(showResult){
+                Text(reslut)
+            }
+
         }
         .padding()
     }

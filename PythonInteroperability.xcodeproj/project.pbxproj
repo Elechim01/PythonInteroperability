@@ -11,6 +11,9 @@
 		C49A9A6828E845470010F507 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A9A6728E845470010F507 /* ContentView.swift */; };
 		C49A9A6A28E845490010F507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49A9A6928E845490010F507 /* Assets.xcassets */; };
 		C49A9A6D28E845490010F507 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49A9A6C28E845490010F507 /* Preview Assets.xcassets */; };
+		C49A9A7628E845AB0010F507 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = C49A9A7528E845AB0010F507 /* PythonKit */; };
+		C49A9A7828E846320010F507 /* PythonFileForInteropability.py in Resources */ = {isa = PBXBuildFile; fileRef = C49A9A7728E846320010F507 /* PythonFileForInteropability.py */; };
+		C49A9A7A28E846810010F507 /* RunPythonCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A9A7928E846810010F507 /* RunPythonCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		C49A9A6928E845490010F507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C49A9A6C28E845490010F507 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C49A9A6E28E845490010F507 /* PythonInteroperability.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PythonInteroperability.entitlements; sourceTree = "<group>"; };
+		C49A9A7728E846320010F507 /* PythonFileForInteropability.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PythonFileForInteropability.py; sourceTree = "<group>"; };
+		C49A9A7928E846810010F507 /* RunPythonCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPythonCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49A9A7628E845AB0010F507 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,9 +60,11 @@
 			children = (
 				C49A9A6528E845470010F507 /* PythonInteroperabilityApp.swift */,
 				C49A9A6728E845470010F507 /* ContentView.swift */,
+				C49A9A7728E846320010F507 /* PythonFileForInteropability.py */,
 				C49A9A6928E845490010F507 /* Assets.xcassets */,
 				C49A9A6E28E845490010F507 /* PythonInteroperability.entitlements */,
 				C49A9A6B28E845490010F507 /* Preview Content */,
+				C49A9A7928E846810010F507 /* RunPythonCode.swift */,
 			);
 			path = PythonInteroperability;
 			sourceTree = "<group>";
@@ -85,6 +93,9 @@
 			dependencies = (
 			);
 			name = PythonInteroperability;
+			packageProductDependencies = (
+				C49A9A7528E845AB0010F507 /* PythonKit */,
+			);
 			productName = PythonInteroperability;
 			productReference = C49A9A6228E845470010F507 /* PythonInteroperability.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +124,9 @@
 				Base,
 			);
 			mainGroup = C49A9A5928E845470010F507;
+			packageReferences = (
+				C49A9A7428E845AB0010F507 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = C49A9A6328E845470010F507 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +143,7 @@
 			files = (
 				C49A9A6D28E845490010F507 /* Preview Assets.xcassets in Resources */,
 				C49A9A6A28E845490010F507 /* Assets.xcassets in Resources */,
+				C49A9A7828E846320010F507 /* PythonFileForInteropability.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49A9A7A28E846810010F507 /* RunPythonCode.swift in Sources */,
 				C49A9A6828E845470010F507 /* ContentView.swift in Sources */,
 				C49A9A6628E845470010F507 /* PythonInteroperabilityApp.swift in Sources */,
 			);
@@ -336,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C49A9A7428E845AB0010F507 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C49A9A7528E845AB0010F507 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C49A9A7428E845AB0010F507 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C49A9A5A28E845470010F507 /* Project object */;
 }
